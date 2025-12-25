@@ -1,0 +1,1646 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FO4A Architecture</title>
+    <meta property="og:image" content="https://bolt.new/static/og_default.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://bolt.new/static/og_default.png">
+    <link rel="preload" href="/logo-start.png" as="image" />
+    <link rel="preload" href="/logo.png" as="image" />
+  </head>
+  <body>
+    <div id="splash-screen" class="splash-screen">
+      <div class="slider-container">
+        <div class="slider">
+          <div class="slide active"></div>
+          <div class="slide"></div>
+          <div class="slide"></div>
+          <div class="slide"></div>
+          <div class="slide"></div>
+        </div>
+        <div class="splash-overlay"></div>
+        <div class="splash-logo">
+          <img src="/logo-start.png" alt="FO4A Architecture" class="splash-logo-image">
+        </div>
+        <div class="splash-text">
+          <p class="splash-tagline">We design calm, emotional spaces with lasting value.</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="main-site" class="main-site">
+      <nav class="navbar">
+        <div class="nav-brand">
+          <img src="/logo.png" alt="FO4A Logo" class="nav-logo">
+        </div>
+        <button class="hamburger" aria-label="Toggle menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+        <div class="nav-links">
+          <a href="#" class="nav-link active" data-page="home">Home</a>
+          <a href="#" class="nav-link" data-page="gallery">Gallery / Projects</a>
+          <a href="#" class="nav-link" data-page="about">About Us / Awards</a>
+          <a href="#" class="nav-link" data-page="contact">Contact Us</a>
+        </div>
+      </nav>
+
+      <main class="main-content">
+        <div id="home-page" class="page active">
+          <section class="about-home-section">
+            <div class="about-home-content">
+              <div class="about-home-text">
+                <h2 class="section-heading">Who We Are</h2>
+                <p>FO4A Architecture (/ˈfɔː.rə/, "Fora") is an architecture and interior design studio founded by Armin Mešić.</p>
+                <p>The idea behind FO4A was conceived in 2011 as an independent architectural exploration, and the studio was officially established between 2015 and 2016.</p>
+                <p>The studio works across residential, hospitality, and commercial projects. Its work is defined by calm atmospheres, material honesty, and a minimalist approach that values restraint over excess.</p>
+                <p>Each project is developed through a careful understanding of context, culture, and the people who will inhabit the space. Rather than imposing a style, FO4A seeks to create environments that feel natural, intuitive, and enduring.</p>
+                <a href="#" class="text-link" data-page="about">Learn more about us</a>
+              </div>
+              <div class="about-home-image">
+                <video autoplay loop muted playsinline style="width: 100%; height: 100%; object-fit: cover;">
+                  <source src="/aboutusimage.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </section>
+
+          <section class="team-section">
+            <div class="team-container">
+              <div class="team-header">
+                <h2 class="team-main-title">Our Team</h2>
+                <p class="team-description">FO4A is a small, dedicated team working closely across all phases of each project.</p>
+              </div>
+
+              <div class="team-founder">
+                <div class="founder-label">Founder / Principal</div>
+                <h3 class="founder-name">Armin Mešić</h3>
+                <p class="founder-title">Founder & Principal Architect</p>
+              </div>
+
+              <div class="team-members">
+                <div class="team-members-label">Team</div>
+                <div class="team-members-list">
+                  <div class="team-member-card">
+                    <h4 class="member-name">Amir Bašić</h4>
+                    <p class="member-role">Senior Architect</p>
+                    <p class="member-tenure">with FO4A since 2020</p>
+                  </div>
+                  <div class="team-member-card">
+                    <h4 class="member-name">Berina Preldžić</h4>
+                    <p class="member-role">Architect</p>
+                    <p class="member-tenure">with FO4A since 2022</p>
+                  </div>
+                  <div class="team-member-card">
+                    <h4 class="member-name">Elma Kuršumlija</h4>
+                    <p class="member-role">Architect</p>
+                    <p class="member-tenure">with FO4A since 2024</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="services-section">
+            <div class="services-container">
+              <h2 class="section-heading-center">What We Do</h2>
+              <div class="services-grid">
+                <div class="service-item">
+                  <div class="service-number">01</div>
+                  <h3>Residential Design</h3>
+                  <p>Creating living spaces that blend comfort with contemporary aesthetics, tailored to individual lifestyles.</p>
+                </div>
+                <div class="service-item">
+                  <div class="service-number">02</div>
+                  <h3>Commercial Architecture</h3>
+                  <p>Designing innovative workspaces that inspire productivity and reflect corporate identity.</p>
+                </div>
+                <div class="service-item">
+                  <div class="service-number">03</div>
+                  <h3>Interior Design</h3>
+                  <p>Crafting cohesive interior environments that complement architectural vision with refined details.</p>
+                </div>
+                <div class="service-item">
+                  <div class="service-number">04</div>
+                  <h3>Urban Planning</h3>
+                  <p>Developing sustainable urban solutions that enhance community living and environmental harmony.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="featured-projects-section">
+            <div class="featured-projects-container">
+              <div class="featured-header">
+                <h2 class="section-heading">Our Projects</h2>
+                <a href="#" class="text-link" data-page="gallery">View all projects</a>
+              </div>
+              <div class="featured-projects-grid">
+                <div class="featured-project" data-project="0">
+                  <div class="featured-project-image" style="background-image: url('/project images/project1/1.webp');"></div>
+                  <div class="featured-project-info">
+                    <h3>KAWA Sarajevo</h3>
+                    <p>Sarajevo, BiH</p>
+                  </div>
+                </div>
+                <div class="featured-project" data-project="1">
+                  <div class="featured-project-image" style="background-image: url('/project images/project2/1.webp');"></div>
+                  <div class="featured-project-info">
+                    <h3>ZLATARA DAR</h3>
+                    <p>Sarajevo, BiH</p>
+                  </div>
+                </div>
+                <div class="featured-project" data-project="2">
+                  <div class="featured-project-image" style="background-image: url('/project images/project3/1.webp');"></div>
+                  <div class="featured-project-info">
+                    <h3>ŽARKA HOUSE</h3>
+                    <p>Jahorina, BiH</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="stats-section">
+            <div class="stats-content-wrapper">
+              <div class="stats-container">
+                <div class="stat-item" data-delay="0">
+                  <div class="stat-circle">
+                    <svg class="stat-progress" viewBox="0 0 200 200">
+                      <circle class="stat-progress-bg" cx="100" cy="100" r="90"></circle>
+                      <circle class="stat-progress-fill" cx="100" cy="100" r="90"></circle>
+                    </svg>
+                    <div class="stat-content">
+                      <div class="stat-number" data-target="150">0</div>
+                      <div class="stat-plus">+</div>
+                    </div>
+                  </div>
+                  <div class="stat-label">Projects Completed</div>
+                </div>
+                <div class="stat-item" data-delay="100">
+                  <div class="stat-circle">
+                    <svg class="stat-progress" viewBox="0 0 200 200">
+                      <circle class="stat-progress-bg" cx="100" cy="100" r="90"></circle>
+                      <circle class="stat-progress-fill" cx="100" cy="100" r="90"></circle>
+                    </svg>
+                    <div class="stat-content">
+                      <div class="stat-number" data-target="25">0</div>
+                      <div class="stat-plus">+</div>
+                    </div>
+                  </div>
+                  <div class="stat-label">Awards Won</div>
+                </div>
+                <div class="stat-item" data-delay="200">
+                  <div class="stat-circle">
+                    <svg class="stat-progress" viewBox="0 0 200 200">
+                      <circle class="stat-progress-bg" cx="100" cy="100" r="90"></circle>
+                      <circle class="stat-progress-fill" cx="100" cy="100" r="90"></circle>
+                    </svg>
+                    <div class="stat-content">
+                      <div class="stat-number" data-target="15">0</div>
+                      <div class="stat-plus">+</div>
+                    </div>
+                  </div>
+                  <div class="stat-label">Countries</div>
+                </div>
+                <div class="stat-item" data-delay="300">
+                  <div class="stat-circle">
+                    <svg class="stat-progress" viewBox="0 0 200 200">
+                      <circle class="stat-progress-bg" cx="100" cy="100" r="90"></circle>
+                      <circle class="stat-progress-fill" cx="100" cy="100" r="90"></circle>
+                    </svg>
+                    <div class="stat-content">
+                      <div class="stat-number" data-target="10">0</div>
+                      <div class="stat-plus"></div>
+                    </div>
+                  </div>
+                  <div class="stat-label">Years Experience</div>
+                </div>
+              </div>
+              <div class="stats-cta">
+                <button class="cta-button" data-page="about">View Our Awards</button>
+              </div>
+            </div>
+          </section>
+
+          <footer class="footer">
+            <div class="footer-content">
+              <div class="footer-section">
+                <img src="/logo.png" alt="FO4A Architecture" class="footer-logo">
+              </div>
+              <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Džemala Bijedića 160</p>
+                <p>Sarajevo, Bosnia and Herzegovina</p>
+                <p>arminmesic@gmail.com</p>
+              </div>
+              <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="#" data-page="home">Home</a>
+                <a href="#" data-page="gallery">Gallery / Projects</a>
+                <a href="#" data-page="about">About Us / Awards</a>
+                <a href="#" data-page="contact">Contact Us</a>
+              </div>
+            </div>
+            <div class="footer-bottom">
+              <p>&copy; 2026 FO4A Architecture. All rights reserved.</p>
+            </div>
+          </footer>
+        </div>
+
+        <div id="gallery-page" class="page">
+          <div class="projects-grid-container">
+            <h1 class="page-title">Our Projects</h1>
+            <div class="projects-grid">
+              <div class="project-card" data-project="0">
+                <div class="project-image" style="background-image: url('/project images/project1/1.webp');"></div>
+                <div class="project-card-info">
+                  <h3>KAWA Sarajevo</h3>
+                  <p>Sarajevo, BiH</p>
+                </div>
+              </div>
+              <div class="project-card" data-project="1">
+                <div class="project-image" style="background-image: url('/project images/project2/1.webp');"></div>
+                <div class="project-card-info">
+                  <h3>ZLATARA DAR</h3>
+                  <p>Sarajevo, BiH</p>
+                </div>
+              </div>
+              <div class="project-card" data-project="2">
+                <div class="project-image" style="background-image: url('/project images/project3/1.webp');"></div>
+                <div class="project-card-info">
+                  <h3>ŽARKA HOUSE</h3>
+                  <p>Jahorina, BiH</p>
+                </div>
+              </div>
+              <div class="project-card" data-project="3">
+                <div class="project-image" style="background-image: url('/project images/project4/1.webp');"></div>
+                <div class="project-card-info">
+                  <h3>BAROLO Restaurant</h3>
+                  <p>Jelah, BiH</p>
+                </div>
+              </div>
+              <div class="project-card" data-project="4">
+                <div class="project-image" style="background-image: url('/project images/project5/1.webp');"></div>
+                <div class="project-card-info">
+                  <h3>FACULTAS — School of English</h3>
+                  <p>Sarajevo, BiH</p>
+                </div>
+              </div>
+              <div class="project-card" data-project="5">
+                <div class="project-image" style="background-image: url('/project images/project6/1.webp');"></div>
+                <div class="project-card-info">
+                  <h3>Clouds Apartments</h3>
+                  <p>Dubrovnik, Croatia</p>
+                </div>
+              </div>
+              <div class="project-card" data-project="6">
+                <div class="project-image" style="background-image: url('/project images/project7/2.webp');"></div>
+                <div class="project-card-info">
+                  <h3>Deloitte Central Office</h3>
+                  <p>Sarajevo, BiH</p>
+                </div>
+              </div>
+              <div class="project-card" data-project="7">
+                <div class="project-image" style="background-image: url('/project images/project8/1.webp');"></div>
+                <div class="project-card-info">
+                  <h3>Apartment Ferhadija</h3>
+                  <p>Sarajevo, BiH</p>
+                </div>
+              </div>
+              <div class="project-card" data-project="8">
+                <div class="project-image" style="background-image: url('/project images/project9/2.webp');"></div>
+                <div class="project-card-info">
+                  <h3>KAWA</h3>
+                  <p>Dubrovnik, Croatia</p>
+                </div>
+              </div>
+              <div class="project-card" data-project="9">
+                <div class="project-image" style="background-image: url('/project images/project10/1.webp');"></div>
+                <div class="project-card-info">
+                  <h3>Mutvak na Vukovu</h3>
+                  <p>Jelah, BiH</p>
+                </div>
+              </div>
+              <div class="project-card" data-project="10">
+                <div class="project-image" style="background-image: url('/project images/project11/1.webp');"></div>
+                <div class="project-card-info">
+                  <h3>School and School</h3>
+                  <p>Sarajevo, BiH</p>
+                </div>
+              </div>
+              <div class="project-card" data-project="11">
+                <div class="project-image" style="background-image: url('/project images/project12/1.webp');"></div>
+                <div class="project-card-info">
+                  <h3>Stay at Home</h3>
+                  <p>Bosnia and Herzegovina</p>
+                </div>
+              </div>
+              <div class="project-card" data-project="12">
+                <div class="project-image" style="background-image: url('/project images/project13/1.webp');"></div>
+                <div class="project-card-info">
+                  <h3>TACTA IT Office</h3>
+                  <p>Sarajevo, BiH</p>
+                </div>
+              </div>
+              <div class="project-card" data-project="13">
+                <div class="project-image" style="background-image: url('/project images/project14/1.webp');"></div>
+                <div class="project-card-info">
+                  <h3>Tahas Mill Bakery</h3>
+                  <p>Tešanj, BiH</p>
+                </div>
+              </div>
+              <div class="project-card" data-project="14">
+                <div class="project-image" style="background-image: url('/project images/project15/1.webp');"></div>
+                <div class="project-card-info">
+                  <h3>Vipend House</h3>
+                  <p>Bosnia and Herzegovina</p>
+                </div>
+              </div>
+              <div class="project-card" data-project="15">
+                <div class="project-image" style="background-image: url('/project images/project16/1.webp');"></div>
+                <div class="project-card-info">
+                  <h3>Winter Shelter</h3>
+                  <p>Bosnia and Herzegovina</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <footer class="footer">
+            <div class="footer-content">
+              <div class="footer-section">
+                <img src="/logo.png" alt="FO4A Architecture" class="footer-logo">
+              </div>
+              <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Džemala Bijedića 160</p>
+                <p>Sarajevo, Bosnia and Herzegovina</p>
+                <p>arminmesic@gmail.com</p>
+              </div>
+              <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="#" data-page="home">Home</a>
+                <a href="#" data-page="gallery">Gallery / Projects</a>
+                <a href="#" data-page="about">About Us / Awards</a>
+                <a href="#" data-page="contact">Contact Us</a>
+              </div>
+            </div>
+            <div class="footer-bottom">
+              <p>&copy; 2026 FO4A Architecture. All rights reserved.</p>
+            </div>
+          </footer>
+        </div>
+
+        <div id="about-page" class="page">
+          <div class="about-page-container">
+            <div class="about-hero">
+              <h1 class="about-hero-title">About Us</h1>
+              <div class="about-hero-content">
+                <div class="about-hero-text">
+                  <p>FO4A Architecture is a contemporary design studio dedicated to creating spaces that harmonize modern aesthetics with functional excellence. Founded in 2015, we've been pushing the boundaries of architectural innovation.</p>
+                  <p>Our approach combines minimalist principles with sustainable practices, resulting in timeless structures that respect both environment and human experience.</p>
+                </div>
+                <div class="about-hero-image" style="background-image: url('/awards-image.webp');"></div>
+              </div>
+            </div>
+
+            <div class="awards-page-section">
+              <h2 class="awards-page-title">Awards & Recognition</h2>
+              <div class="awards-grid">
+                <div class="award-card" data-award="award-1">
+                  <div class="award-card-year">2024</div>
+                  <h3 class="award-card-title">BIGSEE Award</h3>
+                  <p class="award-card-description">Awarded for outstanding contribution to contemporary European architecture and innovation in sustainable design practices.</p>
+                  <div class="award-card-project">
+                    <span>Jelah, BiH</span>
+                    <a href="#" class="award-detail-link">Learn More →</a>
+                  </div>
+                </div>
+
+                <div class="award-card" data-award="award-2">
+                  <div class="award-card-year">2024</div>
+                  <h3 class="award-card-title">BIGSEE Award</h3>
+                  <p class="award-card-description">Recognized for creating living spaces that seamlessly blend comfort with contemporary aesthetics.</p>
+                  <div class="award-card-project">
+                    <span>Jahorina, BiH</span>
+                    <a href="#" class="award-detail-link">Learn More →</a>
+                  </div>
+                </div>
+
+                <div class="award-card" data-award="award-3">
+                  <div class="award-card-year">2023</div>
+                  <h3 class="award-card-title">BIGSEE Award</h3>
+                  <p class="award-card-description">Honored for implementing cutting-edge sustainable technologies and eco-friendly materials in architectural design.</p>
+                  <div class="award-card-project">
+                    <span>Sarajevo, BiH</span>
+                    <a href="#" class="award-detail-link">Learn More →</a>
+                  </div>
+                </div>
+
+                <div class="award-card" data-award="award-4">
+                  <div class="award-card-year">2021</div>
+                  <h3 class="award-card-title">BIGSEE Award</h3>
+                  <p class="award-card-description">Recognized as a rising force in contemporary architecture, celebrating our fresh approach to spatial design.</p>
+                  <div class="award-card-project">
+                    <span>Tešanj, BiH</span>
+                    <a href="#" class="award-detail-link">Learn More →</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <footer class="footer">
+            <div class="footer-content">
+              <div class="footer-section">
+                <img src="/logo.png" alt="FO4A Architecture" class="footer-logo">
+              </div>
+              <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Džemala Bijedića 160</p>
+                <p>Sarajevo, Bosnia and Herzegovina</p>
+                <p>arminmesic@gmail.com</p>
+              </div>
+              <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="#" data-page="home">Home</a>
+                <a href="#" data-page="gallery">Gallery / Projects</a>
+                <a href="#" data-page="about">About Us / Awards</a>
+                <a href="#" data-page="contact">Contact Us</a>
+              </div>
+            </div>
+            <div class="footer-bottom">
+              <p>&copy; 2026 FO4A Architecture. All rights reserved.</p>
+            </div>
+          </footer>
+        </div>
+
+        <div id="contact-page" class="page">
+          <div class="contact-content">
+            <h1 class="page-title">Contact Us</h1>
+            <div class="contact-grid">
+              <div class="contact-info">
+                <h3>Studio</h3>
+                <p>FO4A Architecture</p>
+                <p>Džemala Bijedića 160</p>
+                <p>Sarajevo, Bosnia and Herzegovina</p>
+              </div>
+              <div class="contact-info">
+                <h3>Get in Touch</h3>
+                <p>arminmesic@gmail.com</p>
+              </div>
+            </div>
+            <form class="contact-form">
+              <input type="text" placeholder="Name" required>
+              <input type="email" placeholder="Email" required>
+              <textarea placeholder="Message" rows="6" required></textarea>
+              <button type="submit">Send Message</button>
+            </form>
+          </div>
+
+          <footer class="footer">
+            <div class="footer-content">
+              <div class="footer-section">
+                <img src="/logo.png" alt="FO4A Architecture" class="footer-logo">
+              </div>
+              <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Džemala Bijedića 160</p>
+                <p>Sarajevo, Bosnia and Herzegovina</p>
+                <p>arminmesic@gmail.com</p>
+              </div>
+              <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="#" data-page="home">Home</a>
+                <a href="#" data-page="gallery">Gallery / Projects</a>
+                <a href="#" data-page="about">About Us / Awards</a>
+                <a href="#" data-page="contact">Contact Us</a>
+              </div>
+            </div>
+            <div class="footer-bottom">
+              <p>&copy; 2026 FO4A Architecture. All rights reserved.</p>
+            </div>
+          </footer>
+        </div>
+
+        <div id="award-1-page" class="page award-detail-page">
+          <div class="award-detail-container">
+            <a href="#" class="back-to-awards" data-page="about">← Back to Awards</a>
+            <div class="award-detail-hero">
+              <div class="award-detail-year">2024</div>
+              <h1 class="award-detail-title">BIGSEE Award</h1>
+              <div class="award-detail-subtitle">Restoran "Barolo" u Jelahu</div>
+            </div>
+
+            <div class="award-detail-content-grid">
+              <div class="award-detail-text">
+                <h2>About the Award</h2>
+                <p>The BIGSEE Awards are an international platform recognizing excellence in architecture and interior design, celebrating projects that successfully unite aesthetics, functionality, and contemporary design values. What began as a regional initiative has evolved into a global award program, highlighting outstanding creative achievements across multiple countries.</p>
+
+                <h3>Why This Project Was Recognized</h3>
+                <p>This project was recognized for its clear architectural concept, refined material selection, and thoughtful approach to spatial quality. The jury highlighted the project's ability to balance contemporary design with comfort, creating a cohesive environment where form, function, and atmosphere work seamlessly together.</p>
+              </div>
+
+              <div class="award-detail-images">
+                <div class="award-detail-image-main" style="background-image: url('/award-img1.webp');"></div>
+              </div>
+            </div>
+          </div>
+
+          <footer class="footer">
+            <div class="footer-content">
+              <div class="footer-section">
+                <img src="/logo.png" alt="FO4A Architecture" class="footer-logo">
+              </div>
+              <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Džemala Bijedića 160</p>
+                <p>Sarajevo, Bosnia and Herzegovina</p>
+                <p>arminmesic@gmail.com</p>
+              </div>
+              <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="#" data-page="home">Home</a>
+                <a href="#" data-page="gallery">Gallery / Projects</a>
+                <a href="#" data-page="about">About Us / Awards</a>
+                <a href="#" data-page="contact">Contact Us</a>
+              </div>
+            </div>
+            <div class="footer-bottom">
+              <p>&copy; 2026 FO4A Architecture. All rights reserved.</p>
+            </div>
+          </footer>
+        </div>
+
+        <div id="award-2-page" class="page award-detail-page">
+          <div class="award-detail-container">
+            <a href="#" class="back-to-awards" data-page="about">← Back to Awards</a>
+            <div class="award-detail-hero">
+              <div class="award-detail-year">2024</div>
+              <h1 class="award-detail-title">BIGSEE Award</h1>
+              <div class="award-detail-subtitle">Zarka House Jahorina</div>
+            </div>
+
+            <div class="award-detail-content-grid">
+              <div class="award-detail-text">
+                <h2>About the Award</h2>
+                <p>The BIGSEE Architecture Awards are an international platform recognizing excellence in architecture and design. Originally established as a regional initiative in Southeast Europe, BIGSEE has evolved into a global award program celebrating innovative, original, and high-quality projects in architecture, interior design, product design, and fashion across multiple countries.</p>
+
+                <h3>Why This Project Was Recognized</h3>
+                <p>The Zarka House project in Jahorina was recognized for its strong architectural identity, balanced composition, and thoughtful integration of form and function. The jury highlighted the project's refined material palette, clear spatial organization, and its ability to create a sense of comfort, privacy, and harmony within a contemporary architectural expression.</p>
+              </div>
+
+              <div class="award-detail-images">
+                <div class="award-detail-image-main" style="background-image: url('/award-img2.webp');"></div>
+              </div>
+            </div>
+          </div>
+
+          <footer class="footer">
+            <div class="footer-content">
+              <div class="footer-section">
+                <img src="/logo.png" alt="FO4A Architecture" class="footer-logo">
+              </div>
+              <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Džemala Bijedića 160</p>
+                <p>Sarajevo, Bosnia and Herzegovina</p>
+                <p>arminmesic@gmail.com</p>
+              </div>
+              <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="#" data-page="home">Home</a>
+                <a href="#" data-page="gallery">Gallery / Projects</a>
+                <a href="#" data-page="about">About Us / Awards</a>
+                <a href="#" data-page="contact">Contact Us</a>
+              </div>
+            </div>
+            <div class="footer-bottom">
+              <p>&copy; 2026 FO4A Architecture. All rights reserved.</p>
+            </div>
+          </footer>
+        </div>
+
+        <div id="award-3-page" class="page award-detail-page">
+          <div class="award-detail-container">
+            <a href="#" class="back-to-awards" data-page="about">← Back to Awards</a>
+            <div class="award-detail-hero">
+              <div class="award-detail-year">2023</div>
+              <h1 class="award-detail-title">BIGSEE Award</h1>
+              <div class="award-detail-subtitle">Kawa specialty coffee bar</div>
+            </div>
+
+            <div class="award-detail-content-grid">
+              <div class="award-detail-text">
+                <h2>About the Award</h2>
+                <p>The BIGSEE Architecture Awards are an international platform recognizing excellence in architecture and design. Originally established as a regional initiative in Southeast Europe, BIGSEE has evolved into a global award program celebrating innovative, original, and high-quality projects in architecture, interior design, product design, and fashion across multiple countries.</p>
+
+                <h3>Why This Project Was Recognized</h3>
+                <p>The Kawa Specialty Coffee Bar interior project was recognized for its clear design concept, refined material selection, and strong spatial identity. The jury highlighted the project's ability to create a warm, inviting atmosphere while maintaining a contemporary and functional layout, resulting in a cohesive interior that enhances both the user experience and brand character.</p>
+              </div>
+
+              <div class="award-detail-images">
+                <div class="award-detail-image-main" style="background-image: url('/award-img3.webp');"></div>
+              </div>
+            </div>
+          </div>
+
+          <footer class="footer">
+            <div class="footer-content">
+              <div class="footer-section">
+                <img src="/logo.png" alt="FO4A Architecture" class="footer-logo">
+              </div>
+              <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Džemala Bijedića 160</p>
+                <p>Sarajevo, Bosnia and Herzegovina</p>
+                <p>arminmesic@gmail.com</p>
+              </div>
+              <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="#" data-page="home">Home</a>
+                <a href="#" data-page="gallery">Gallery / Projects</a>
+                <a href="#" data-page="about">About Us / Awards</a>
+                <a href="#" data-page="contact">Contact Us</a>
+              </div>
+            </div>
+            <div class="footer-bottom">
+              <p>&copy; 2026 FO4A Architecture. All rights reserved.</p>
+            </div>
+          </footer>
+        </div>
+
+        <div id="award-4-page" class="page award-detail-page">
+          <div class="award-detail-container">
+            <a href="#" class="back-to-awards" data-page="about">← Back to Awards</a>
+            <div class="award-detail-hero">
+              <div class="award-detail-year">2021</div>
+              <h1 class="award-detail-title">BIGSEE Award</h1>
+              <div class="award-detail-subtitle">"Tahas Mill" Caffe bakery</div>
+            </div>
+
+            <div class="award-detail-content-grid">
+              <div class="award-detail-text">
+                <h2>About the Award</h2>
+                <p>The BIGSEE Architecture Awards are an international platform recognizing excellence in architecture and design. Originally established as a regional initiative in Southeast Europe, BIGSEE has evolved into a global award program celebrating innovative, original, and high-quality projects in architecture, interior design, product design, and fashion across multiple countries.</p>
+              </div>
+
+              <div class="award-detail-images">
+                <div class="award-detail-image-main" style="background-image: url('/award-img4.webp');"></div>
+              </div>
+            </div>
+          </div>
+
+          <footer class="footer">
+            <div class="footer-content">
+              <div class="footer-section">
+                <img src="/logo.png" alt="FO4A Architecture" class="footer-logo">
+              </div>
+              <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Džemala Bijedića 160</p>
+                <p>Sarajevo, Bosnia and Herzegovina</p>
+                <p>arminmesic@gmail.com</p>
+              </div>
+              <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="#" data-page="home">Home</a>
+                <a href="#" data-page="gallery">Gallery / Projects</a>
+                <a href="#" data-page="about">About Us / Awards</a>
+                <a href="#" data-page="contact">Contact Us</a>
+              </div>
+            </div>
+            <div class="footer-bottom">
+              <p>&copy; 2026 FO4A Architecture. All rights reserved.</p>
+            </div>
+          </footer>
+        </div>
+
+        <div id="project-0-page" class="page project-detail-page">
+          <div class="award-detail-container">
+            <a href="#" class="back-to-projects" data-page="gallery">← Back to Projects</a>
+            <div class="award-detail-hero">
+              <h1 class="award-detail-title">KAWA Sarajevo</h1>
+              <div class="award-detail-subtitle">Sarajevo, BiH</div>
+            </div>
+
+            <div class="award-detail-content-grid">
+              <div class="award-detail-text">
+                <p>KAWA is a small café interior shaped by restraint, texture, and atmosphere rather than overt gestures.</p>
+                <p>The project works with the existing structure instead of erasing it. Exposed brick walls, worn plaster surfaces, and traces of the original space are preserved and carefully balanced with new, calm interventions. The result is an interior that feels honest, layered, and quietly contemporary.</p>
+                <p>Natural materials dominate the space. Light wood furniture, neutral tones, and soft lighting create a relaxed and intimate environment, while simple forms allow textures and imperfections to remain visible. Nothing is hidden, nothing is overdesigned.</p>
+                <p>The layout encourages slow movement and informal gathering. The space is flexible, unpretentious, and human in scale — designed to feel equally comfortable whether full or almost empty.</p>
+                <p>KAWA is not conceived as a statement interior, but as a place that feels familiar from the first visit. A space where architecture steps back, allowing everyday rituals to take the foreground.</p>
+              </div>
+
+              <div class="award-detail-images">
+                <div class="award-detail-image-main" style="background-image: url('/project images/project1/1.webp');"></div>
+                <div class="award-detail-image-grid">
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project1/2.webp');"></div>
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project1/3.webp');"></div>
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project1/4.webp');"></div>
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project1/5.webp');"></div>
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project1/6.webp');"></div>
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project1/7.webp');"></div>
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project1/8.webp');"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <footer class="footer">
+            <div class="footer-content">
+              <div class="footer-section">
+                <img src="/logo.png" alt="FO4A Architecture" class="footer-logo">
+              </div>
+              <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Džemala Bijedića 160</p>
+                <p>Sarajevo, Bosnia and Herzegovina</p>
+                <p>arminmesic@gmail.com</p>
+              </div>
+              <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="#" data-page="home">Home</a>
+                <a href="#" data-page="gallery">Gallery / Projects</a>
+                <a href="#" data-page="about">About Us / Awards</a>
+                <a href="#" data-page="contact">Contact Us</a>
+              </div>
+            </div>
+            <div class="footer-bottom">
+              <p>&copy; 2026 FO4A Architecture. All rights reserved.</p>
+            </div>
+          </footer>
+        </div>
+
+        <div id="project-1-page" class="page project-detail-page">
+          <div class="award-detail-container">
+            <a href="#" class="back-to-projects" data-page="gallery">← Back to Projects</a>
+            <div class="award-detail-hero">
+              <h1 class="award-detail-title">ZLATARA DAR</h1>
+              <div class="award-detail-subtitle">Sarajevo, BiH</div>
+            </div>
+
+            <div class="award-detail-content-grid">
+              <div class="award-detail-text">
+                <p>ZLATARA DAR is conceived as a quiet interior for a precise craft.</p>
+                <p>Rather than relying on display or spectacle, the space is structured around clarity, proportion, and calm. Jewelry is treated as the focal point, while the architecture remains restrained and supportive — present, but never dominant.</p>
+                <p>The interior balances softness and precision. Warm wood surfaces, muted stone tones, and carefully integrated lighting create an atmosphere that feels intimate and composed. Display elements are reduced to their essentials, allowing each piece to stand on its own without visual noise.</p>
+                <p>Light plays a central role. It is controlled, indirect, and deliberate — guiding attention while maintaining a sense of ease and trust. Materials are honest, details are subtle, and transitions between spaces are fluid.</p>
+                <p>ZLATARA DAR is designed as a place of quiet confidence. An interior that reflects the value of what it holds, without needing to announce it.</p>
+              </div>
+
+              <div class="award-detail-images">
+                <div class="award-detail-image-main" style="background-image: url('/project images/project2/1.webp');"></div>
+                <div class="award-detail-image-grid">
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project2/3.webp');"></div>
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project2/4.webp');"></div>
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project2/5.webp');"></div>
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project2/6.webp');"></div>
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project2/7.webp');"></div>
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project2/8.webp');"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <footer class="footer">
+            <div class="footer-content">
+              <div class="footer-section">
+                <img src="/logo.png" alt="FO4A Architecture" class="footer-logo">
+              </div>
+              <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Džemala Bijedića 160</p>
+                <p>Sarajevo, Bosnia and Herzegovina</p>
+                <p>arminmesic@gmail.com</p>
+              </div>
+              <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="#" data-page="home">Home</a>
+                <a href="#" data-page="gallery">Gallery / Projects</a>
+                <a href="#" data-page="about">About Us / Awards</a>
+                <a href="#" data-page="contact">Contact Us</a>
+              </div>
+            </div>
+            <div class="footer-bottom">
+              <p>&copy; 2026 FO4A Architecture. All rights reserved.</p>
+            </div>
+          </footer>
+        </div>
+
+        <div id="project-2-page" class="page project-detail-page">
+          <div class="award-detail-container">
+            <a href="#" class="back-to-projects" data-page="gallery">← Back to Projects</a>
+            <div class="award-detail-hero">
+              <h1 class="award-detail-title">ŽARKA HOUSE</h1>
+              <div class="award-detail-subtitle">Jahorina, BiH</div>
+            </div>
+
+            <div class="award-detail-content-grid">
+              <div class="award-detail-text">
+                <p>ŽARKA House is a residential project shaped by warmth, proportion, and everyday comfort.</p>
+                <p>The architecture is intentionally calm. Spatial relationships are clear, transitions are soft, and materials are allowed to express themselves without decoration. Wood, stone, and neutral surfaces define the atmosphere, creating a sense of continuity throughout the house.</p>
+                <p>Natural light is treated as a building material. Openings are carefully positioned to bring light deep into the interior, shaping the spaces throughout the day and reinforcing the connection between inside and outside.</p>
+                <p>The layout prioritizes lived experience over formal gestures. Spaces are open yet defined, intimate without being enclosed. Every element is designed to support daily life rather than dominate it.</p>
+                <p>ŽARKA House is not about visual impact, but about lasting comfort — a home that feels grounded, warm, and quietly complete.</p>
+              </div>
+
+              <div class="award-detail-images">
+                <div class="award-detail-image-main" style="background-image: url('/project images/project3/1.webp');"></div>
+                <div class="award-detail-image-grid">
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project3/2.webp');"></div>
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project3/3.webp');"></div>
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project3/4.webp');"></div>
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project3/5.webp');"></div>
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project3/6.webp');"></div>
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project3/7.webp');"></div>
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project3/8.webp');"></div>
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project3/9.webp');"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <footer class="footer">
+            <div class="footer-content">
+              <div class="footer-section">
+                <img src="/logo.png" alt="FO4A Architecture" class="footer-logo">
+              </div>
+              <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Džemala Bijedića 160</p>
+                <p>Sarajevo, Bosnia and Herzegovina</p>
+                <p>arminmesic@gmail.com</p>
+              </div>
+              <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="#" data-page="home">Home</a>
+                <a href="#" data-page="gallery">Gallery / Projects</a>
+                <a href="#" data-page="about">About Us / Awards</a>
+                <a href="#" data-page="contact">Contact Us</a>
+              </div>
+            </div>
+            <div class="footer-bottom">
+              <p>&copy; 2026 FO4A Architecture. All rights reserved.</p>
+            </div>
+          </footer>
+        </div>
+
+        <div id="project-3-page" class="page project-detail-page">
+          <div class="award-detail-container">
+            <a href="#" class="back-to-projects" data-page="gallery">← Back to Projects</a>
+            <div class="award-detail-hero">
+              <h1 class="award-detail-title">BAROLO Restaurant</h1>
+              <div class="award-detail-subtitle">Jelah, BiH</div>
+            </div>
+
+            <div class="award-detail-content-grid">
+              <div class="award-detail-text">
+                <p>BAROLO is an interior defined by atmosphere, depth, and material richness.</p>
+                <p>The space is organized as a sequence of layered zones, allowing movement and pause to coexist. Dark tones, textured surfaces, and warm lighting establish a sense of intimacy, while the scale remains generous and open.</p>
+                <p>Materials are used to create contrast without excess. Concrete, wood, metal, and fabric are carefully balanced, allowing light to soften their presence. Custom elements and lighting details add rhythm to the space, guiding the experience without directing it.</p>
+                <p>The bar acts as a central anchor — both spatially and socially — while seating areas vary in character, offering different levels of privacy and engagement. The interior adapts naturally to different moods, from quiet evenings to lively gatherings.</p>
+                <p>BAROLO is designed as a place to stay longer than planned. An interior where architecture supports conversation, atmosphere, and the ritual of dining, without drawing attention away from it.</p>
+              </div>
+
+              <div class="award-detail-images">
+                <div class="award-detail-image-main" style="background-image: url('/project images/project4/1.webp');"></div>
+                <div class="award-detail-image-grid">
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project4/2.webp');"></div>
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project4/3.webp');"></div>
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project4/4.webp');"></div>
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project4/5.webp');"></div>
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project4/6.webp');"></div>
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project4/7.webp');"></div>
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project4/8.webp');"></div>
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project4/9.webp');"></div>
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project4/10.webp');"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <footer class="footer">
+            <div class="footer-content">
+              <div class="footer-section">
+                <img src="/logo.png" alt="FO4A Architecture" class="footer-logo">
+              </div>
+              <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Džemala Bijedića 160</p>
+                <p>Sarajevo, Bosnia and Herzegovina</p>
+                <p>arminmesic@gmail.com</p>
+              </div>
+              <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="#" data-page="home">Home</a>
+                <a href="#" data-page="gallery">Gallery / Projects</a>
+                <a href="#" data-page="about">About Us / Awards</a>
+                <a href="#" data-page="contact">Contact Us</a>
+              </div>
+            </div>
+            <div class="footer-bottom">
+              <p>&copy; 2026 FO4A Architecture. All rights reserved.</p>
+            </div>
+          </footer>
+        </div>
+
+        <div id="project-4-page" class="page project-detail-page">
+          <div class="award-detail-container">
+            <a href="#" class="back-to-projects" data-page="gallery">← Back to Projects</a>
+            <div class="award-detail-hero">
+              <h1 class="award-detail-title">FACULTAS — School of English</h1>
+              <div class="award-detail-subtitle">Sarajevo, BiH</div>
+            </div>
+
+            <div class="award-detail-content-grid">
+              <div class="award-detail-text">
+                <p>Facultas is designed as a learning environment that feels open, calm, and approachable.</p>
+                <p>The interior combines clear spatial organization with moments of warmth and playfulness. Simple furniture, natural light, and soft colors establish a focused atmosphere, while carefully placed graphic elements introduce character without overwhelming the space.</p>
+                <p>Movement through the school is intuitive and relaxed. Classrooms and shared areas are connected visually, encouraging interaction while maintaining a sense of comfort and scale.</p>
+                <p>The space supports learning without imposing formality.</p>
+                <p>Architecture remains in the background, allowing curiosity and attention to come forward.</p>
+              </div>
+
+              <div class="award-detail-images">
+                <div class="award-detail-image-main" style="background-image: url('/project images/project5/1.webp');"></div>
+                <div class="award-detail-image-grid">
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project5/2.webp');"></div>
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project5/3.webp');"></div>
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project5/4.webp');"></div>
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project5/5.webp');"></div>
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project5/6.webp');"></div>
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project5/7.webp');"></div>
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project5/8.webp');"></div>
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project5/9.webp');"></div>
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project5/10.webp');"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <footer class="footer">
+            <div class="footer-content">
+              <div class="footer-section">
+                <img src="/logo.png" alt="FO4A Architecture" class="footer-logo">
+              </div>
+              <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Džemala Bijedića 160</p>
+                <p>Sarajevo, Bosnia and Herzegovina</p>
+                <p>arminmesic@gmail.com</p>
+              </div>
+              <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="#" data-page="home">Home</a>
+                <a href="#" data-page="gallery">Gallery / Projects</a>
+                <a href="#" data-page="about">About Us / Awards</a>
+                <a href="#" data-page="contact">Contact Us</a>
+              </div>
+            </div>
+            <div class="footer-bottom">
+              <p>&copy; 2026 FO4A Architecture. All rights reserved.</p>
+            </div>
+          </footer>
+        </div>
+
+        <div id="project-5-page" class="page project-detail-page">
+          <div class="award-detail-container">
+            <a href="#" class="back-to-projects" data-page="gallery">← Back to Projects</a>
+            <div class="award-detail-hero">
+              <h1 class="award-detail-title">Clouds Apartments</h1>
+              <div class="award-detail-subtitle">Dubrovnik, Croatia</div>
+            </div>
+
+            <div class="award-detail-content-grid">
+              <div class="award-detail-text">
+                <p>Clouds Apartments is a small interior intervention within a historic building on Stradun, shaped by calm, light, and restraint.</p>
+                <p>The project works with the existing architecture rather than competing with it. Thick stone walls, deep window reveals, and traditional proportions are preserved and gently complemented with contemporary elements. Old and new coexist without tension, allowing the space to feel natural and unforced.</p>
+                <p>The interior is defined by a soft palette and tactile materials. Light wood floors, muted wall tones, and simple furniture create a quiet backdrop, while accents of blue reference the surrounding sky and sea. Daylight becomes a central element, moving through the space and changing its character throughout the day.</p>
+                <p>Furniture is modest and carefully scaled. Each element has a clear purpose, supporting everyday rituals rather than drawing attention to itself. The atmosphere is domestic, relaxed, and intentionally uncomplicated.</p>
+                <p>Among its guests was Tom Jones, whose stay reflects the project's understated character — a space that attracts attention not through spectacle, but through comfort, calm, and discretion.</p>
+                <p>Clouds Apartments is conceived as a temporary home rather than a hospitality interior — familiar, quiet, and unobtrusive — where architecture steps back and the city takes the lead.</p>
+              </div>
+
+              <div class="award-detail-images">
+                <div class="award-detail-image-main" style="background-image: url('/project images/project6/1.webp');"></div>
+                <div class="award-detail-image-grid">
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project6/2.webp');"></div>
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project6/3.webp');"></div>
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project6/4.webp');"></div>
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project6/5.webp');"></div>
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project6/6.webp');"></div>
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project6/7.webp');"></div>
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project6/8.webp');"></div>
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project6/10.webp');"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <footer class="footer">
+            <div class="footer-content">
+              <div class="footer-section">
+                <img src="/logo.png" alt="FO4A Architecture" class="footer-logo">
+              </div>
+              <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Džemala Bijedića 160</p>
+                <p>Sarajevo, Bosnia and Herzegovina</p>
+                <p>arminmesic@gmail.com</p>
+              </div>
+              <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="#" data-page="home">Home</a>
+                <a href="#" data-page="gallery">Gallery / Projects</a>
+                <a href="#" data-page="about">About Us / Awards</a>
+                <a href="#" data-page="contact">Contact Us</a>
+              </div>
+            </div>
+            <div class="footer-bottom">
+              <p>&copy; 2026 FO4A Architecture. All rights reserved.</p>
+            </div>
+          </footer>
+        </div>
+
+        <div id="project-6-page" class="page project-detail-page">
+          <div class="award-detail-container">
+            <a href="#" class="back-to-projects" data-page="gallery">← Back to Projects</a>
+            <div class="award-detail-hero">
+              <h1 class="award-detail-title">Deloitte Central Office</h1>
+              <div class="award-detail-subtitle">Sarajevo, BiH</div>
+            </div>
+
+            <div class="award-detail-content-grid">
+              <div class="award-detail-text">
+                <p>The Deloitte central office in Sarajevo is conceived as a calm, efficient working environment where clarity and comfort take precedence over visual noise.</p>
+                <p>The project is structured around openness and order. Workspaces are organised to support focus and collaboration, with clear spatial logic and unobstructed movement. Visual connections between zones are maintained, allowing the office to feel connected rather than fragmented.</p>
+                <p>Material choices are restrained and purposeful. Light wood surfaces, neutral backgrounds, and soft green accents introduce warmth without distracting from daily work. Acoustic elements and integrated lighting are carefully balanced to create a comfortable, controlled atmosphere throughout the space.</p>
+                <p>The interior avoids expressive gestures. Instead, it relies on proportion, rhythm, and consistency to create a sense of stability. Details are subtle, functional, and quietly refined.</p>
+                <p>This is not an office designed to impress at first glance, but one that reveals its quality over time — a workplace that supports concentration, well-being, and long-term use, allowing architecture to remain in the background while work takes center stage.</p>
+              </div>
+
+              <div class="award-detail-images">
+                <div class="award-detail-image-main" style="background-image: url('/project images/project7/2.webp');"></div>
+                <div class="award-detail-image-grid">
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project7/2.webp');"></div>
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project7/3.webp');"></div>
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project7/4.webp');"></div>
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project7/5.webp');"></div>
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project7/6.webp');"></div>
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project7/7.webp');"></div>
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project7/8.webp');"></div>
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project7/9.webp');"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <footer class="footer">
+            <div class="footer-content">
+              <div class="footer-section">
+                <img src="/logo.png" alt="FO4A Architecture" class="footer-logo">
+              </div>
+              <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Džemala Bijedića 160</p>
+                <p>Sarajevo, Bosnia and Herzegovina</p>
+                <p>arminmesic@gmail.com</p>
+              </div>
+              <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="#" data-page="home">Home</a>
+                <a href="#" data-page="gallery">Gallery / Projects</a>
+                <a href="#" data-page="about">About Us / Awards</a>
+                <a href="#" data-page="contact">Contact Us</a>
+              </div>
+            </div>
+            <div class="footer-bottom">
+              <p>&copy; 2026 FO4A Architecture. All rights reserved.</p>
+            </div>
+          </footer>
+        </div>
+
+        <div id="project-7-page" class="page project-detail-page">
+          <div class="award-detail-container">
+            <a href="#" class="back-to-projects" data-page="gallery">← Back to Projects</a>
+            <div class="award-detail-hero">
+              <h1 class="award-detail-title">Apartment Ferhadija</h1>
+              <div class="award-detail-subtitle">Sarajevo, BiH</div>
+            </div>
+
+            <div class="award-detail-content-grid">
+              <div class="award-detail-text">
+                <p>Apartment Ferhadija is conceived as a calm domestic interior within one of Sarajevo's most active urban streets. The project focuses on balance — between openness and privacy, softness and structure, contemporary living and the character of the existing space.</p>
+                <p>The layout is simple and legible. Spaces flow naturally, without visual noise or unnecessary separation. Materials and colors are deliberately restrained, allowing light, texture, and proportion to carry the atmosphere.</p>
+                <p>Warm wood surfaces, muted tones, and carefully selected furniture create a sense of ease rather than display. Decorative elements are minimal and intentional — present enough to add depth, never enough to dominate the space.</p>
+                <p>The apartment is designed for everyday life. A place that feels composed but relaxed, quiet but not distant. The architecture does not seek attention; it supports routines, pauses, and moments of rest within the city.</p>
+                <p>Apartment Ferhadija is not about making a statement. It is about creating a lived-in calm — a space that feels settled, balanced, and quietly confident.</p>
+              </div>
+
+              <div class="award-detail-images">
+                <div class="award-detail-image-main" style="background-image: url('/project images/project8/1.webp');"></div>
+                <div class="award-detail-image-grid">
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project8/2.webp');"></div>
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project8/3.webp');"></div>
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project8/4.webp');"></div>
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project8/5.webp');"></div>
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project8/6.webp');"></div>
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project8/7.webp');"></div>
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project8/8.webp');"></div>
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project8/9.webp');"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <footer class="footer">
+            <div class="footer-content">
+              <div class="footer-section">
+                <img src="/logo.png" alt="FO4A Architecture" class="footer-logo">
+              </div>
+              <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Džemala Bijedića 160</p>
+                <p>Sarajevo, Bosnia and Herzegovina</p>
+                <p>arminmesic@gmail.com</p>
+              </div>
+              <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="#" data-page="home">Home</a>
+                <a href="#" data-page="gallery">Gallery / Projects</a>
+                <a href="#" data-page="about">About Us / Awards</a>
+                <a href="#" data-page="contact">Contact Us</a>
+              </div>
+            </div>
+            <div class="footer-bottom">
+              <p>&copy; 2026 FO4A Architecture. All rights reserved.</p>
+            </div>
+          </footer>
+        </div>
+
+        <div id="project-8-page" class="page project-detail-page">
+          <div class="award-detail-container">
+            <a href="#" class="back-to-projects" data-page="gallery">← Back to Projects</a>
+            <div class="award-detail-hero">
+              <h1 class="award-detail-title">KAWA</h1>
+              <div class="award-detail-subtitle">Dubrovnik, Croatia</div>
+            </div>
+
+            <div class="award-detail-content-grid">
+              <div class="award-detail-text">
+                <p>KAWA in Dubrovnik is conceived as a hybrid space — somewhere between a shop, a living room, and a place to meet. Rather than functioning as a conventional retail interior, the space invites lingering and unplanned encounters.</p>
+                <p>The interior is bright, open, and deliberately flexible. White surfaces, exposed structure, and a restrained material palette create a calm backdrop where objects, people, and atmosphere take precedence. Furniture is arranged informally, almost domestically, blurring the boundary between public and private.</p>
+                <p>Large openings toward the street and the sea establish a strong connection with the city. The space changes throughout the day, shaped by light, movement, and seasonal rhythms, becoming part of everyday Dubrovnik life.</p>
+                <p>KAWA is not designed to impress at first glance, but to endure — a place entered without intention and left only after time has quietly passed.</p>
+              </div>
+
+              <div class="award-detail-images">
+                <div class="award-detail-image-main" style="background-image: url('/project images/project9/2.webp');"></div>
+                <div class="award-detail-image-grid">
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project9/2.webp');"></div>
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project9/3.webp');"></div>
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project9/4.webp');"></div>
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project9/5.webp');"></div>
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project9/6.webp');"></div>
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project9/7.webp');"></div>
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project9/8.webp');"></div>
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project9/9.webp');"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <footer class="footer">
+            <div class="footer-content">
+              <div class="footer-section">
+                <img src="/logo.png" alt="FO4A Architecture" class="footer-logo">
+              </div>
+              <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Džemala Bijedića 160</p>
+                <p>Sarajevo, Bosnia and Herzegovina</p>
+                <p>arminmesic@gmail.com</p>
+              </div>
+              <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="#" data-page="home">Home</a>
+                <a href="#" data-page="gallery">Gallery / Projects</a>
+                <a href="#" data-page="about">About Us / Awards</a>
+                <a href="#" data-page="contact">Contact Us</a>
+              </div>
+            </div>
+            <div class="footer-bottom">
+              <p>&copy; 2026 FO4A Architecture. All rights reserved.</p>
+            </div>
+          </footer>
+        </div>
+
+        <div id="project-9-page" class="page project-detail-page">
+          <div class="award-detail-container">
+            <a href="#" class="back-to-projects" data-page="gallery">← Back to Projects</a>
+            <div class="award-detail-hero">
+              <h1 class="award-detail-title">Mutvak na Vukovu</h1>
+              <div class="award-detail-subtitle">Jelah, BiH</div>
+            </div>
+
+            <div class="award-detail-content-grid">
+              <div class="award-detail-text">
+                <p>Mutvak na Vukovu is conceived as a small, self-contained retreat for gathering, cooking, and slowing down. The architecture is modest and grounded, responding directly to the landscape and the rituals of daily use.</p>
+                <p>The interior is organized as an open, adaptable space that shifts with the seasons. In summer, the house opens toward the terrace and pool, dissolving into the landscape. In winter, it becomes more compact and intimate, centered around warmth and shared meals.</p>
+                <p>Natural materials define the atmosphere — stone, wood, and muted textures that tie the interior to its surroundings. The boundary between inside and outside is intentionally softened, allowing views, light, and greenery to become part of the spatial experience.</p>
+                <p>Mutvak is not a typical weekend house, but a place shaped by rituals: cooking, conversation, and unhurried time. Architecture steps back, serving the landscape, the people, and the moment.</p>
+              </div>
+
+              <div class="award-detail-images">
+                <div class="award-detail-image-main" style="background-image: url('/project images/project10/1.webp');"></div>
+                <div class="award-detail-image-grid">
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project10/2.webp');"></div>
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project10/3.webp');"></div>
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project10/4.webp');"></div>
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project10/5.webp');"></div>
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project10/6.webp');"></div>
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project10/7.webp');"></div>
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project10/8.webp');"></div>
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project10/9.webp');"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <footer class="footer">
+            <div class="footer-content">
+              <div class="footer-section">
+                <img src="/logo.png" alt="FO4A Architecture" class="footer-logo">
+              </div>
+              <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Džemala Bijedića 160</p>
+                <p>Sarajevo, Bosnia and Herzegovina</p>
+                <p>arminmesic@gmail.com</p>
+              </div>
+              <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="#" data-page="home">Home</a>
+                <a href="#" data-page="gallery">Gallery / Projects</a>
+                <a href="#" data-page="about">About Us / Awards</a>
+                <a href="#" data-page="contact">Contact Us</a>
+              </div>
+            </div>
+            <div class="footer-bottom">
+              <p>&copy; 2026 FO4A Architecture. All rights reserved.</p>
+            </div>
+          </footer>
+        </div>
+
+        <div id="project-10-page" class="page project-detail-page">
+          <div class="award-detail-container">
+            <a href="#" class="back-to-projects" data-page="gallery">← Back to Projects</a>
+            <div class="award-detail-hero">
+              <h1 class="award-detail-title">School and School</h1>
+              <div class="award-detail-subtitle">Sarajevo, BiH</div>
+            </div>
+
+            <div class="award-detail-content-grid">
+              <div class="award-detail-text">
+                <p>School and School is a kindergarten located within an Austro-Hungarian era building in the center of Sarajevo. The project is guided by respect for the existing architecture and a careful understanding of how children experience space.</p>
+                <p>Rather than treating the interior as a playful object, the design focuses on calmness, clarity, and proportion. High ceilings, generous windows, and original spatial rhythms are preserved and gently complemented with new interventions that feel natural to the building.</p>
+                <p>Natural materials define the atmosphere. Light wood, soft tones, and tactile surfaces create a warm and balanced environment, while perforated panels and custom furniture introduce flexibility without visual noise. The palette is intentionally restrained, allowing light, movement, and everyday activity to become the main spatial elements.</p>
+                <p>The layout encourages independence, curiosity, and quiet concentration. Spaces are open yet clearly structured, offering children a sense of orientation and safety without confinement.</p>
+                <p>School and School is not designed to overwhelm or entertain, but to support growth through calm presence — a place where architecture steps back, giving room for learning, play, and everyday discovery.</p>
+              </div>
+
+              <div class="award-detail-images">
+                <div class="award-detail-image-main" style="background-image: url('/project images/project11/1.webp');"></div>
+                <div class="award-detail-image-grid">
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project11/2.webp');"></div>
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project11/3.webp');"></div>
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project11/4.webp');"></div>
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project11/5.webp');"></div>
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project11/6.webp');"></div>
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project11/7.webp');"></div>
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project11/8.webp');"></div>
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project11/9.webp');"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <footer class="footer">
+            <div class="footer-content">
+              <div class="footer-section">
+                <img src="/logo.png" alt="FO4A Architecture" class="footer-logo">
+              </div>
+              <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Džemala Bijedića 160</p>
+                <p>Sarajevo, Bosnia and Herzegovina</p>
+                <p>arminmesic@gmail.com</p>
+              </div>
+              <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="#" data-page="home">Home</a>
+                <a href="#" data-page="gallery">Gallery / Projects</a>
+                <a href="#" data-page="about">About Us / Awards</a>
+                <a href="#" data-page="contact">Contact Us</a>
+              </div>
+            </div>
+            <div class="footer-bottom">
+              <p>&copy; 2026 FO4A Architecture. All rights reserved.</p>
+            </div>
+          </footer>
+        </div>
+
+        <div id="project-11-page" class="page project-detail-page">
+          <div class="award-detail-container">
+            <a href="#" class="back-to-projects" data-page="gallery">← Back to Projects</a>
+            <div class="award-detail-hero">
+              <h1 class="award-detail-title">Stay at Home</h1>
+              <div class="award-detail-subtitle">Bosnia and Herzegovina</div>
+            </div>
+
+            <div class="award-detail-content-grid">
+              <div class="award-detail-text">
+                <p>Stay at Home is conceived as a place of retreat rather than display — a house designed to support everyday life, not to compete with it.</p>
+                <p>The project is defined by clear geometry and a restrained material palette. Natural wood, soft mineral surfaces, and muted tones create an interior that feels calm, grounded, and timeless. Materials are used honestly, without decoration, allowing texture, light, and proportion to shape the atmosphere.</p>
+                <p>The spatial layout is open yet carefully controlled. Living, dining, and kitchen areas flow into one another, while subtle shifts in material and ceiling height define zones without the need for walls. Large openings connect the interior to the surrounding landscape, blurring the boundary between inside and outside.</p>
+                <p>Light is treated as a material in itself. Daylight enters deep into the space, changing the character of rooms throughout the day, while artificial lighting remains discreet and warm, supporting evening rituals without dominating the space.</p>
+                <p>Stay at Home is not about novelty or visual impact. It is a house shaped by routine, silence, and presence — a place where architecture steps back, allowing life to unfold naturally.</p>
+              </div>
+
+              <div class="award-detail-images">
+                <div class="award-detail-image-main" style="background-image: url('/project images/project12/1.webp');"></div>
+                <div class="award-detail-image-grid">
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project12/2.webp');"></div>
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project12/3.webp');"></div>
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project12/4.webp');"></div>
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project12/5.webp');"></div>
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project12/6.webp');"></div>
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project12/7.webp');"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <footer class="footer">
+            <div class="footer-content">
+              <div class="footer-section">
+                <img src="/logo.png" alt="FO4A Architecture" class="footer-logo">
+              </div>
+              <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Džemala Bijedića 160</p>
+                <p>Sarajevo, Bosnia and Herzegovina</p>
+                <p>arminmesic@gmail.com</p>
+              </div>
+              <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="#" data-page="home">Home</a>
+                <a href="#" data-page="gallery">Gallery / Projects</a>
+                <a href="#" data-page="about">About Us / Awards</a>
+                <a href="#" data-page="contact">Contact Us</a>
+              </div>
+            </div>
+            <div class="footer-bottom">
+              <p>&copy; 2026 FO4A Architecture. All rights reserved.</p>
+            </div>
+          </footer>
+        </div>
+
+        <div id="project-12-page" class="page project-detail-page">
+          <div class="award-detail-container">
+            <a href="#" class="back-to-projects" data-page="gallery">← Back to Projects</a>
+            <div class="award-detail-hero">
+              <h1 class="award-detail-title">TACTA IT Office</h1>
+              <div class="award-detail-subtitle">Sarajevo, BiH</div>
+            </div>
+
+            <div class="award-detail-content-grid">
+              <div class="award-detail-text">
+                <p>The TACTA IT office is conceived as a quiet framework for focus, collaboration, and clarity.</p>
+                <p>Rather than following conventional office typologies, the project balances openness and separation through carefully placed glass partitions, controlled lighting, and a restrained material palette. Transparency is used not as a visual statement, but as a way to maintain connection while preserving concentration.</p>
+                <p>Dark tones, soft textiles, and warm wood accents create a calm, grounded atmosphere that counterbalances the technical nature of the work taking place inside. Acoustic comfort and visual order were treated as primary design tools, shaping spaces that feel composed rather than rigid.</p>
+                <p>Meeting rooms and shared areas are deliberately understated. Furniture and details remain secondary to use, allowing the space to adapt naturally to different rhythms of work throughout the day.</p>
+                <p>TACTA IT Office is not designed to impress at first glance. It reveals itself gradually — through comfort, usability, and a sense of quiet confidence that supports long-term work rather than short-term effect.</p>
+              </div>
+
+              <div class="award-detail-images">
+                <div class="award-detail-image-main" style="background-image: url('/project images/project13/1.webp');"></div>
+                <div class="award-detail-image-grid">
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project13/2.webp');"></div>
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project13/3.webp');"></div>
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project13/4.webp');"></div>
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project13/5.webp');"></div>
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project13/6.webp');"></div>
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project13/7.webp');"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <footer class="footer">
+            <div class="footer-content">
+              <div class="footer-section">
+                <img src="/logo.png" alt="FO4A Architecture" class="footer-logo">
+              </div>
+              <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Džemala Bijedića 160</p>
+                <p>Sarajevo, Bosnia and Herzegovina</p>
+                <p>arminmesic@gmail.com</p>
+              </div>
+              <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="#" data-page="home">Home</a>
+                <a href="#" data-page="gallery">Gallery / Projects</a>
+                <a href="#" data-page="about">About Us / Awards</a>
+                <a href="#" data-page="contact">Contact Us</a>
+              </div>
+            </div>
+            <div class="footer-bottom">
+              <p>&copy; 2026 FO4A Architecture. All rights reserved.</p>
+            </div>
+          </footer>
+        </div>
+
+        <div id="project-13-page" class="page project-detail-page">
+          <div class="award-detail-container">
+            <a href="#" class="back-to-projects" data-page="gallery">← Back to Projects</a>
+            <div class="award-detail-hero">
+              <h1 class="award-detail-title">Tahas Mill Bakery</h1>
+              <div class="award-detail-subtitle">Tešanj, BiH</div>
+            </div>
+
+            <div class="award-detail-content-grid">
+              <div class="award-detail-text">
+                <p>Tahas Mill is a small bakery interior shaped by simplicity, warmth, and everyday use.</p>
+                <p>The project combines contemporary interventions with familiar elements. Wood, ceramic tiles, and muted tones create a calm and approachable atmosphere, while carefully framed details give the space its character without overwhelming it. Nothing is exaggerated; everything has a clear purpose.</p>
+                <p>The interior is organized to be functional and intuitive. The counter, seating, and circulation are arranged to support daily rhythms — quick visits, short pauses, and moments of rest. Light is soft and controlled, allowing textures and materials to remain present rather than dominant.</p>
+                <p>Tahas Mill is not designed to stand out, but to belong. A modest, honest space where architecture quietly supports routine, craft, and the simple act of stopping for bread.</p>
+              </div>
+
+              <div class="award-detail-images">
+                <div class="award-detail-image-main" style="background-image: url('/project images/project14/1.webp');"></div>
+                <div class="award-detail-image-grid">
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project14/2.webp');"></div>
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project14/3.webp');"></div>
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project14/4.webp');"></div>
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project14/5.webp');"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <footer class="footer">
+            <div class="footer-content">
+              <div class="footer-section">
+                <img src="/logo.png" alt="FO4A Architecture" class="footer-logo">
+              </div>
+              <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Džemala Bijedića 160</p>
+                <p>Sarajevo, Bosnia and Herzegovina</p>
+                <p>arminmesic@gmail.com</p>
+              </div>
+              <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="#" data-page="home">Home</a>
+                <a href="#" data-page="gallery">Gallery / Projects</a>
+                <a href="#" data-page="about">About Us / Awards</a>
+                <a href="#" data-page="contact">Contact Us</a>
+              </div>
+            </div>
+            <div class="footer-bottom">
+              <p>&copy; 2026 FO4A Architecture. All rights reserved.</p>
+            </div>
+          </footer>
+        </div>
+
+        <div id="project-14-page" class="page project-detail-page">
+          <div class="award-detail-container">
+            <a href="#" class="back-to-projects" data-page="gallery">← Back to Projects</a>
+            <div class="award-detail-hero">
+              <h1 class="award-detail-title">Vipend House</h1>
+              <div class="award-detail-subtitle">Bosnia and Herzegovina</div>
+            </div>
+
+            <div class="award-detail-content-grid">
+              <div class="award-detail-text">
+                <p>Vipend House is conceived as a quiet refuge placed carefully within a steep natural landscape.</p>
+                <p>The architecture responds to the terrain by lifting the house from the ground, minimizing intervention and allowing the landscape to remain largely untouched. The building rests lightly above the slope, opening long views toward the surrounding forest and distant mountains.</p>
+                <p>Material choices are restrained and honest. Dark exterior surfaces contrast with the softness of wood inside, creating a calm transition from the exterior environment to the interior spaces. Large openings frame the landscape as a constant presence, allowing light, weather, and seasonal change to become part of daily life.</p>
+                <p>The interior is simple and grounded. Natural wood, tactile surfaces, and muted tones create a warm atmosphere without decoration. Furniture and built-in elements are reduced to essentials, leaving space for silence and stillness.</p>
+                <p>Vipend House is not designed as a statement object, but as a place for slowing down.</p>
+                <p>A house defined by its relationship to nature, light, and time — where architecture quietly supports retreat, rest, and presence.</p>
+              </div>
+
+              <div class="award-detail-images">
+                <div class="award-detail-image-main" style="background-image: url('/project images/project15/1.webp');"></div>
+                <div class="award-detail-image-grid">
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project15/2.webp');"></div>
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project15/3.webp');"></div>
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project15/4.webp');"></div>
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project15/5.webp');"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <footer class="footer">
+            <div class="footer-content">
+              <div class="footer-section">
+                <img src="/logo.png" alt="FO4A Architecture" class="footer-logo">
+              </div>
+              <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Džemala Bijedića 160</p>
+                <p>Sarajevo, Bosnia and Herzegovina</p>
+                <p>arminmesic@gmail.com</p>
+              </div>
+              <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="#" data-page="home">Home</a>
+                <a href="#" data-page="gallery">Gallery / Projects</a>
+                <a href="#" data-page="about">About Us / Awards</a>
+                <a href="#" data-page="contact">Contact Us</a>
+              </div>
+            </div>
+            <div class="footer-bottom">
+              <p>&copy; 2026 FO4A Architecture. All rights reserved.</p>
+            </div>
+          </footer>
+        </div>
+
+        <div id="project-15-page" class="page project-detail-page">
+          <div class="award-detail-container">
+            <a href="#" class="back-to-projects" data-page="gallery">← Back to Projects</a>
+            <div class="award-detail-hero">
+              <h1 class="award-detail-title">Winter Shelter</h1>
+              <div class="award-detail-subtitle">Bosnia and Herzegovina</div>
+            </div>
+
+            <div class="award-detail-content-grid">
+              <div class="award-detail-text">
+                <p>Winter Shelter is a small architectural retreat shaped by landscape, memory, and silence.</p>
+                <p>The project is conceived as a place of pause — a compact structure set gently into the terrain, responding to snow, forest, and distant horizons rather than dominating them. Its form is simple and restrained, reduced to essentials.</p>
+                <p>Materiality plays a central role. Timber surfaces, muted tones, and tactile finishes create an interior that feels warm without excess. Everything is close, measured, and intentional. Light enters carefully, framing the landscape as part of the living space.</p>
+                <p>The shelter draws inspiration from Bosnian stećci and rural vernacular — not through imitation, but through atmosphere. Solidity, protection, and timelessness are translated into a contemporary language.</p>
+                <p>Winter Shelter is not designed for comfort as luxury, but for stillness. A place to retreat, to observe, and to reconnect with the rhythm of nature.</p>
+              </div>
+
+              <div class="award-detail-images">
+                <div class="award-detail-image-main" style="background-image: url('/project images/project16/1.webp');"></div>
+                <div class="award-detail-image-grid">
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project16/2.webp');"></div>
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project16/3.webp');"></div>
+                  <div class="award-detail-image-small" style="background-image: url('/project images/project16/4.webp');"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <footer class="footer">
+            <div class="footer-content">
+              <div class="footer-section">
+                <img src="/logo.png" alt="FO4A Architecture" class="footer-logo">
+              </div>
+              <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Džemala Bijedića 160</p>
+                <p>Sarajevo, Bosnia and Herzegovina</p>
+                <p>arminmesic@gmail.com</p>
+              </div>
+              <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="#" data-page="home">Home</a>
+                <a href="#" data-page="gallery">Gallery / Projects</a>
+                <a href="#" data-page="about">About Us / Awards</a>
+                <a href="#" data-page="contact">Contact Us</a>
+              </div>
+            </div>
+            <div class="footer-bottom">
+              <p>&copy; 2026 FO4A Architecture. All rights reserved.</p>
+            </div>
+          </footer>
+        </div>
+      </main>
+
+      <div id="image-lightbox" class="image-lightbox">
+        <button class="lightbox-close">&times;</button>
+        <button class="lightbox-prev">&#10094;</button>
+        <button class="lightbox-next">&#10095;</button>
+        <div class="lightbox-content">
+          <div class="lightbox-image"></div>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
