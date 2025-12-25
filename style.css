@@ -976,6 +976,7 @@ body {
   margin-bottom: 80px;
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
   transition: box-shadow 0.3s ease;
+  position: relative;
 }
 
 .team-founder:hover {
@@ -1033,6 +1034,7 @@ body {
   background: #f8f8f8;
   border-radius: 2px;
   transition: transform 0.3s ease, background 0.3s ease;
+  position: relative;
 }
 
 .team-member-card:hover {
@@ -1060,6 +1062,29 @@ body {
   color: #888;
   margin: 0;
   font-style: italic;
+}
+
+.linkedin-icon {
+  position: absolute;
+  top: 32px;
+  right: 32px;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0.9;
+}
+
+.linkedin-icon:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+.linkedin-icon svg {
+  width: 100%;
+  height: 100%;
 }
 
 .services-section {
@@ -1560,6 +1585,13 @@ body {
 
   .team-member-card {
     padding: 24px;
+  }
+
+  .linkedin-icon {
+    top: 20px;
+    right: 20px;
+    width: 36px;
+    height: 36px;
   }
 
   .member-name {
