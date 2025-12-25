@@ -1,6 +1,14 @@
 import './style.css'
 
 window.addEventListener('DOMContentLoaded', () => {
+  const pageLoader = document.getElementById('page-loader');
+  const splashScreen = document.getElementById('splash-screen');
+
+  setTimeout(() => {
+    pageLoader.classList.add('hidden');
+    splashScreen.classList.add('visible');
+  }, 1500);
+
   let currentSlide = 0;
   const slides = document.querySelectorAll('.slide');
   const totalSlides = slides.length;
@@ -14,7 +22,6 @@ window.addEventListener('DOMContentLoaded', () => {
   const slideInterval = setInterval(nextSlide, 2500);
 
   const sliderContainer = document.querySelector('.slider-container');
-  const splashScreen = document.getElementById('splash-screen');
   const mainSite = document.getElementById('main-site');
 
   const hideSplash = () => {

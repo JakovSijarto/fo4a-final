@@ -29,6 +29,75 @@ body {
   overflow: hidden;
 }
 
+.page-loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #1a1a1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.page-loader.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.loader-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.loader-logo {
+  width: 180px;
+  height: auto;
+  animation: loaderPulse 1.5s ease-in-out infinite;
+  filter: brightness(0) invert(1);
+}
+
+@keyframes loaderPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+}
+
+.loader-bar {
+  width: 200px;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.loader-progress {
+  width: 0;
+  height: 100%;
+  background: #ffffff;
+  animation: loaderProgress 1.5s ease-out forwards;
+}
+
+@keyframes loaderProgress {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
 .splash-screen {
   position: fixed;
   top: 0;
@@ -37,6 +106,13 @@ body {
   height: 100vh;
   z-index: 1000;
   transition: opacity 0.6s ease, visibility 0.6s ease;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.splash-screen.visible {
+  opacity: 1;
+  visibility: visible;
 }
 
 .splash-screen.hidden {
@@ -111,7 +187,7 @@ body {
 
 .splash-text {
   position: absolute;
-  bottom: 60px;
+  bottom: 150px;
   left: 60px;
   z-index: 10;
   animation: fadeInLogo 1s ease-out;
@@ -1305,13 +1381,21 @@ body {
 }
 
 @media (max-width: 768px) {
+  .loader-logo {
+    width: 120px;
+  }
+
+  .loader-bar {
+    width: 150px;
+  }
+
   .splash-logo {
     top: 40px;
     right: 40px;
   }
 
   .splash-text {
-    bottom: 40px;
+    bottom: 100px;
     left: 40px;
     right: 40px;
   }
