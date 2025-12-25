@@ -4,9 +4,65 @@ window.addEventListener('DOMContentLoaded', () => {
   const pageLoader = document.getElementById('page-loader');
   const splashScreen = document.getElementById('splash-screen');
 
+  const imagesToPreload = [
+    '/public/carousel-image1.webp',
+    '/public/carousel-image2.webp',
+    '/public/carousel-image3.webp',
+    '/public/carousel-image4.webp',
+    '/public/carousel-image5.webp',
+    '/public/award-img1.webp',
+    '/public/award-img2.webp',
+    '/public/award-img3.webp',
+    '/public/award-img4.webp',
+    '/public/award-image5.webp',
+    '/public/award-image6.webp',
+    '/public/award-image7.webp',
+    '/public/award-image8.webp',
+    '/public/award-image9.webp',
+    '/public/awards-image.webp'
+  ];
+
+  let assetsLoaded = false;
+  let minTimeElapsed = false;
+
+  function preloadAssets() {
+    const promises = imagesToPreload.map(src => {
+      return new Promise((resolve) => {
+        const img = new Image();
+        img.onload = () => resolve();
+        img.onerror = () => resolve();
+        img.src = src;
+      });
+    });
+
+    const video = document.createElement('video');
+    const videoPromise = new Promise((resolve) => {
+      video.onloadeddata = () => resolve();
+      video.onerror = () => resolve();
+      video.src = '/public/aboutusimage.mp4';
+      video.load();
+    });
+
+    promises.push(videoPromise);
+
+    Promise.all(promises).then(() => {
+      assetsLoaded = true;
+      checkAndHideLoader();
+    });
+  }
+
+  function checkAndHideLoader() {
+    if (assetsLoaded && minTimeElapsed) {
+      pageLoader.classList.add('hidden');
+      splashScreen.classList.add('visible');
+    }
+  }
+
+  preloadAssets();
+
   setTimeout(() => {
-    pageLoader.classList.add('hidden');
-    splashScreen.classList.add('visible');
+    minTimeElapsed = true;
+    checkAndHideLoader();
   }, 1500);
 
   let currentSlide = 0;
