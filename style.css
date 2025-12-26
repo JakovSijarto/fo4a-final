@@ -213,7 +213,7 @@ body {
 }
 
 .splash-tagline {
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   font-weight: 600;
   color: #ffffff;
   text-align: left;
@@ -1429,7 +1429,7 @@ body {
   }
 
   .splash-tagline {
-    font-size: 0.95rem;
+    font-size: 0.85rem;
     font-weight: 500;
     max-width: calc(100% - 80px);
     line-height: 1.5;
