@@ -140,10 +140,11 @@ window.addEventListener('DOMContentLoaded', () => {
         pages.forEach(page => page.classList.remove('active'));
         const targetPage = document.getElementById(`${pageName}-page`);
         if (targetPage) {
+          const mainContent = document.querySelector('.main-content');
+          if (mainContent) {
+            mainContent.scrollTop = 0;
+          }
           targetPage.classList.add('active');
-          setTimeout(() => {
-            window.scrollTo({ top: 0, behavior: 'instant' });
-          }, 0);
         }
       } else {
         navigateToPage(pageName, false);
@@ -155,10 +156,11 @@ window.addEventListener('DOMContentLoaded', () => {
           pages.forEach(page => page.classList.remove('active'));
           const targetPage = document.getElementById(`${hash}-page`);
           if (targetPage) {
+            const mainContent = document.querySelector('.main-content');
+            if (mainContent) {
+              mainContent.scrollTop = 0;
+            }
             targetPage.classList.add('active');
-            setTimeout(() => {
-              window.scrollTo({ top: 0, behavior: 'instant' });
-            }, 0);
           }
         } else {
           navigateToPage(hash, false);
@@ -329,10 +331,11 @@ window.addEventListener('DOMContentLoaded', () => {
         pages.forEach(page => page.classList.remove('active'));
         const targetPage = document.getElementById(`${awardPage}-page`);
         if (targetPage) {
+          const mainContent = document.querySelector('.main-content');
+          if (mainContent) {
+            mainContent.scrollTop = 0;
+          }
           targetPage.classList.add('active');
-          setTimeout(() => {
-            window.scrollTo({ top: 0, behavior: 'instant' });
-          }, 0);
           history.pushState({ page: awardPage }, '', `#${awardPage}`);
         }
       });
@@ -350,10 +353,11 @@ window.addEventListener('DOMContentLoaded', () => {
           pages.forEach(page => page.classList.remove('active'));
           const targetPage = document.getElementById(`${awardPage}-page`);
           if (targetPage) {
+            const mainContent = document.querySelector('.main-content');
+            if (mainContent) {
+              mainContent.scrollTop = 0;
+            }
             targetPage.classList.add('active');
-            setTimeout(() => {
-              window.scrollTo({ top: 0, behavior: 'instant' });
-            }, 0);
             history.pushState({ page: awardPage }, '', `#${awardPage}`);
           }
         }
