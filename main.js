@@ -141,10 +141,9 @@ window.addEventListener('DOMContentLoaded', () => {
         const targetPage = document.getElementById(`${pageName}-page`);
         if (targetPage) {
           targetPage.classList.add('active');
-          const mainContent = document.querySelector('.main-content');
-          if (mainContent) {
-            mainContent.scrollTo({ top: 0, behavior: 'smooth' });
-          }
+          setTimeout(() => {
+            window.scrollTo({ top: 0, behavior: 'instant' });
+          }, 0);
         }
       } else {
         navigateToPage(pageName, false);
@@ -157,10 +156,9 @@ window.addEventListener('DOMContentLoaded', () => {
           const targetPage = document.getElementById(`${hash}-page`);
           if (targetPage) {
             targetPage.classList.add('active');
-            const mainContent = document.querySelector('.main-content');
-            if (mainContent) {
-              mainContent.scrollTo({ top: 0, behavior: 'smooth' });
-            }
+            setTimeout(() => {
+              window.scrollTo({ top: 0, behavior: 'instant' });
+            }, 0);
           }
         } else {
           navigateToPage(hash, false);
@@ -332,7 +330,9 @@ window.addEventListener('DOMContentLoaded', () => {
         const targetPage = document.getElementById(`${awardPage}-page`);
         if (targetPage) {
           targetPage.classList.add('active');
-          window.scrollTo(0, 0);
+          setTimeout(() => {
+            window.scrollTo({ top: 0, behavior: 'instant' });
+          }, 0);
           history.pushState({ page: awardPage }, '', `#${awardPage}`);
         }
       });
@@ -351,7 +351,9 @@ window.addEventListener('DOMContentLoaded', () => {
           const targetPage = document.getElementById(`${awardPage}-page`);
           if (targetPage) {
             targetPage.classList.add('active');
-            window.scrollTo(0, 0);
+            setTimeout(() => {
+              window.scrollTo({ top: 0, behavior: 'instant' });
+            }, 0);
             history.pushState({ page: awardPage }, '', `#${awardPage}`);
           }
         }
