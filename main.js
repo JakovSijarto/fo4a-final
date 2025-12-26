@@ -75,12 +75,20 @@ window.addEventListener('DOMContentLoaded', () => {
     splashScreen.classList.add('hidden');
     setTimeout(() => {
       mainSite.classList.add('visible');
+      const pages = document.querySelectorAll('.page');
+      pages.forEach(page => page.classList.remove('active'));
+      const homePage = document.getElementById('home-page');
+      if (homePage) {
+        homePage.classList.add('active');
+      }
       setupProjectClickHandlers();
       setupAwardHandlers();
     }, 300);
   };
 
   sliderContainer.addEventListener('click', hideSplash);
+
+  setTimeout(hideSplash, 6000);
 
   const hamburger = document.querySelector('.hamburger');
   const navLinksContainer = document.querySelector('.nav-links');
