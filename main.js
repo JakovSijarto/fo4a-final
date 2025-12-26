@@ -88,7 +88,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   sliderContainer.addEventListener('click', hideSplash);
 
-  setTimeout(hideSplash, 6000);
+  setTimeout(hideSplash, 10000);
 
   const hamburger = document.querySelector('.hamburger');
   const navLinksContainer = document.querySelector('.nav-links');
