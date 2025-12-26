@@ -186,7 +186,7 @@ body {
 
 .splash-text {
   position: absolute;
-  bottom: 220px;
+  bottom: 150px;
   left: 60px;
   z-index: 10;
   animation: fadeInLogo 1s ease-out;
@@ -1419,7 +1419,7 @@ body {
   }
 
   .splash-text {
-    bottom: 100px;
+    bottom: 200px;
     left: 40px;
     right: 40px;
   }
