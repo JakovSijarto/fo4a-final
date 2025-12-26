@@ -2222,13 +2222,17 @@ body {
 
 .award-detail-image-main {
   width: 100%;
-  height: 500px;
-  background-size: cover;
+  height: auto;
+  min-height: 400px;
+  background-size: contain;
   background-position: center;
+  background-repeat: no-repeat;
   margin-bottom: 20px;
   cursor: pointer;
   transition: transform 0.3s ease;
   will-change: transform;
+  padding-bottom: 75%;
+  background-color: #f8f8f8;
 }
 
 .award-detail-image-main:hover {
@@ -2302,7 +2306,8 @@ body {
   }
 
   .award-detail-image-main {
-    height: 300px;
+    min-height: 250px;
+    padding-bottom: 100%;
   }
 
   .award-detail-image-grid {
