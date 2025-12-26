@@ -35,16 +35,6 @@ window.addEventListener('DOMContentLoaded', () => {
       });
     });
 
-    const video = document.createElement('video');
-    const videoPromise = new Promise((resolve) => {
-      video.onloadeddata = () => resolve();
-      video.onerror = () => resolve();
-      video.src = '/public/aboutusimage.mp4';
-      video.load();
-    });
-
-    promises.push(videoPromise);
-
     Promise.all(promises).then(() => {
       assetsLoaded = true;
       checkAndHideLoader();
@@ -103,63 +93,97 @@ window.addEventListener('DOMContentLoaded', () => {
   const navLinks = document.querySelectorAll('.nav-link');
   const pages = document.querySelectorAll('.page');
 
+  function navigateToPage(targetPage, addToHistory = true) {
+    navLinks.forEach(navLink => {
+      navLink.classList.remove('active');
+    });
+
+    const activeNavLink = document.querySelector(`.nav-link[data-page="${targetPage}"]`);
+    if (activeNavLink) {
+      activeNavLink.classList.add('active');
+    }
+
+    pages.forEach(page => {
+      page.classList.remove('active');
+    });
+
+    const targetElement = document.getElementById(`${targetPage}-page`);
+    if (targetElement) {
+      targetElement.classList.add('active');
+
+      const mainContent = document.querySelector('.main-content');
+      if (mainContent) {
+        mainContent.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+
+      if (addToHistory) {
+        history.pushState({ page: targetPage }, '', `#${targetPage}`);
+      }
+    }
+  }
+
   navLinks.forEach(link => {
     link.addEventListener('click', (e) => {
       e.preventDefault();
       const targetPage = link.getAttribute('data-page');
-
-      navLinks.forEach(navLink => {
-        navLink.classList.remove('active');
-      });
-      link.classList.add('active');
-
-      pages.forEach(page => {
-        page.classList.remove('active');
-      });
-
-      const targetElement = document.getElementById(`${targetPage}-page`);
-      if (targetElement) {
-        targetElement.classList.add('active');
-
-        const mainContent = document.querySelector('.main-content');
-        if (mainContent) {
-          mainContent.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-      }
+      navigateToPage(targetPage, true);
 
       hamburger.classList.remove('active');
       navLinksContainer.classList.remove('active');
     });
   });
 
+  window.addEventListener('popstate', (e) => {
+    if (e.state && e.state.page) {
+      const pageName = e.state.page;
+      if (pageName.startsWith('project-') || pageName.startsWith('award-')) {
+        pages.forEach(page => page.classList.remove('active'));
+        const targetPage = document.getElementById(`${pageName}-page`);
+        if (targetPage) {
+          targetPage.classList.add('active');
+          const mainContent = document.querySelector('.main-content');
+          if (mainContent) {
+            mainContent.scrollTo({ top: 0, behavior: 'smooth' });
+          }
+        }
+      } else {
+        navigateToPage(pageName, false);
+      }
+    } else {
+      const hash = window.location.hash.substring(1);
+      if (hash) {
+        if (hash.startsWith('project-') || hash.startsWith('award-')) {
+          pages.forEach(page => page.classList.remove('active'));
+          const targetPage = document.getElementById(`${hash}-page`);
+          if (targetPage) {
+            targetPage.classList.add('active');
+            const mainContent = document.querySelector('.main-content');
+            if (mainContent) {
+              mainContent.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+          }
+        } else {
+          navigateToPage(hash, false);
+        }
+      } else {
+        navigateToPage('home', false);
+      }
+    }
+  });
+
+  const initialPage = window.location.hash.substring(1) || 'home';
+  if (initialPage !== 'home') {
+    history.replaceState({ page: initialPage }, '', `#${initialPage}`);
+  } else {
+    history.replaceState({ page: 'home' }, '', window.location.pathname);
+  }
+
   const backToAwardsLinks = document.querySelectorAll('.back-to-awards');
   backToAwardsLinks.forEach(link => {
     link.addEventListener('click', (e) => {
       e.preventDefault();
       const targetPage = link.getAttribute('data-page');
-
-      navLinks.forEach(navLink => {
-        navLink.classList.remove('active');
-      });
-
-      const aboutNavLink = document.querySelector('.nav-link[data-page="about"]');
-      if (aboutNavLink) {
-        aboutNavLink.classList.add('active');
-      }
-
-      pages.forEach(page => {
-        page.classList.remove('active');
-      });
-
-      const targetElement = document.getElementById(`${targetPage}-page`);
-      if (targetElement) {
-        targetElement.classList.add('active');
-
-        const mainContent = document.querySelector('.main-content');
-        if (mainContent) {
-          mainContent.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-      }
+      navigateToPage(targetPage, true);
     });
   });
 
@@ -204,23 +228,7 @@ window.addEventListener('DOMContentLoaded', () => {
     link.addEventListener('click', (e) => {
       e.preventDefault();
       const targetPage = link.getAttribute('data-page');
-
-      navLinks.forEach(navLink => navLink.classList.remove('active'));
-      pages.forEach(page => page.classList.remove('active'));
-
-      const targetElement = document.getElementById(`${targetPage}-page`);
-      if (targetElement) {
-        targetElement.classList.add('active');
-        const navLink = document.querySelector(`[data-page="${targetPage}"]`);
-        if (navLink && navLink.classList.contains('nav-link')) {
-          navLink.classList.add('active');
-        }
-
-        const mainContent = document.querySelector('.main-content');
-        if (mainContent) {
-          mainContent.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-      }
+      navigateToPage(targetPage, true);
     });
   });
 
@@ -229,23 +237,7 @@ window.addEventListener('DOMContentLoaded', () => {
     link.addEventListener('click', (e) => {
       e.preventDefault();
       const targetPage = link.getAttribute('data-page');
-
-      navLinks.forEach(navLink => navLink.classList.remove('active'));
-      pages.forEach(page => page.classList.remove('active'));
-
-      const targetElement = document.getElementById(`${targetPage}-page`);
-      if (targetElement) {
-        targetElement.classList.add('active');
-        const navLink = document.querySelector(`.nav-link[data-page="${targetPage}"]`);
-        if (navLink) {
-          navLink.classList.add('active');
-        }
-
-        const mainContent = document.querySelector('.main-content');
-        if (mainContent) {
-          mainContent.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-      }
+      navigateToPage(targetPage, true);
     });
   });
 
@@ -253,23 +245,7 @@ window.addEventListener('DOMContentLoaded', () => {
   ctaButtons.forEach(button => {
     button.addEventListener('click', (e) => {
       const targetPage = button.getAttribute('data-page');
-
-      navLinks.forEach(navLink => navLink.classList.remove('active'));
-      pages.forEach(page => page.classList.remove('active'));
-
-      const targetElement = document.getElementById(`${targetPage}-page`);
-      if (targetElement) {
-        targetElement.classList.add('active');
-        const navLink = document.querySelector(`.nav-link[data-page="${targetPage}"]`);
-        if (navLink) {
-          navLink.classList.add('active');
-        }
-
-        const mainContent = document.querySelector('.main-content');
-        if (mainContent) {
-          mainContent.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-      }
+      navigateToPage(targetPage, true);
     });
   });
 
@@ -278,15 +254,16 @@ window.addEventListener('DOMContentLoaded', () => {
     featuredProjects.forEach(project => {
       project.addEventListener('click', () => {
         const projectIndex = parseInt(project.getAttribute('data-project'));
-        const pages = document.querySelectorAll('.page');
+        const targetPageId = `project-${projectIndex}`;
         pages.forEach(page => page.classList.remove('active'));
-        const targetPage = document.getElementById(`project-${projectIndex}-page`);
+        const targetPage = document.getElementById(`${targetPageId}-page`);
         if (targetPage) {
           targetPage.classList.add('active');
           const mainContent = document.querySelector('.main-content');
           if (mainContent) {
             mainContent.scrollTo({ top: 0, behavior: 'smooth' });
           }
+          history.pushState({ page: targetPageId }, '', `#${targetPageId}`);
         }
       });
     });
@@ -295,15 +272,16 @@ window.addEventListener('DOMContentLoaded', () => {
     projectCards.forEach(card => {
       card.addEventListener('click', () => {
         const projectIndex = parseInt(card.getAttribute('data-project'));
-        const pages = document.querySelectorAll('.page');
+        const targetPageId = `project-${projectIndex}`;
         pages.forEach(page => page.classList.remove('active'));
-        const targetPage = document.getElementById(`project-${projectIndex}-page`);
+        const targetPage = document.getElementById(`${targetPageId}-page`);
         if (targetPage) {
           targetPage.classList.add('active');
           const mainContent = document.querySelector('.main-content');
           if (mainContent) {
             mainContent.scrollTo({ top: 0, behavior: 'smooth' });
           }
+          history.pushState({ page: targetPageId }, '', `#${targetPageId}`);
         }
       });
     });
@@ -313,29 +291,7 @@ window.addEventListener('DOMContentLoaded', () => {
       link.addEventListener('click', (e) => {
         e.preventDefault();
         const targetPage = link.getAttribute('data-page');
-
-        navLinks.forEach(navLink => {
-          navLink.classList.remove('active');
-        });
-
-        const galleryNavLink = document.querySelector('.nav-link[data-page="gallery"]');
-        if (galleryNavLink) {
-          galleryNavLink.classList.add('active');
-        }
-
-        pages.forEach(page => {
-          page.classList.remove('active');
-        });
-
-        const targetElement = document.getElementById(`${targetPage}-page`);
-        if (targetElement) {
-          targetElement.classList.add('active');
-
-          const mainContent = document.querySelector('.main-content');
-          if (mainContent) {
-            mainContent.scrollTo({ top: 0, behavior: 'smooth' });
-          }
-        }
+        navigateToPage(targetPage, true);
       });
     });
   }
@@ -377,6 +333,7 @@ window.addEventListener('DOMContentLoaded', () => {
         if (targetPage) {
           targetPage.classList.add('active');
           window.scrollTo(0, 0);
+          history.pushState({ page: awardPage }, '', `#${awardPage}`);
         }
       });
     });
@@ -395,6 +352,7 @@ window.addEventListener('DOMContentLoaded', () => {
           if (targetPage) {
             targetPage.classList.add('active');
             window.scrollTo(0, 0);
+            history.pushState({ page: awardPage }, '', `#${awardPage}`);
           }
         }
       });
