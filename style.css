@@ -213,7 +213,7 @@ body {
 }
 
 .splash-tagline {
-  font-size: 1.1rem;
+  font-size: 0.95rem;
   font-weight: 600;
   color: #ffffff;
   text-align: left;
@@ -1363,6 +1363,39 @@ body {
   margin-bottom: 16px;
 }
 
+.footer-social-links {
+  display: flex;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.footer-social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: #f8f8f8;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  margin-bottom: 0;
+}
+
+.footer-social-links a:hover {
+  background: #0a0a0a;
+}
+
+.footer-social-links a:hover svg {
+  fill: #ffffff;
+}
+
+.footer-social-links svg {
+  width: 20px;
+  height: 20px;
+  fill: #0a0a0a;
+  transition: fill 0.3s ease;
+}
+
 .footer-section h4 {
   font-size: 1.1rem;
   font-weight: 500;
@@ -1429,7 +1462,7 @@ body {
   }
 
   .splash-tagline {
-    font-size: 0.85rem;
+    font-size: 0.75rem;
     font-weight: 500;
     max-width: calc(100% - 80px);
     line-height: 1.5;
