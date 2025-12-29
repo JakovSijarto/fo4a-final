@@ -511,4 +511,25 @@ window.addEventListener('DOMContentLoaded', () => {
       });
     });
   });
+
+  const spotifyToggle = document.getElementById('spotify-toggle');
+  const spotifyContainer = document.getElementById('spotify-player-container');
+  const spotifyClose = document.getElementById('spotify-close');
+
+  if (spotifyToggle && spotifyContainer && spotifyClose) {
+    spotifyToggle.addEventListener('click', () => {
+      spotifyContainer.classList.toggle('active');
+    });
+
+    spotifyClose.addEventListener('click', (e) => {
+      e.stopPropagation();
+      spotifyContainer.classList.remove('active');
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!document.getElementById('spotify-player').contains(e.target)) {
+        spotifyContainer.classList.remove('active');
+      }
+    });
+  }
 });
