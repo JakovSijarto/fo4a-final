@@ -1373,8 +1373,8 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 56px;
+  height: 56px;
   background: #f8f8f8;
   border-radius: 50%;
   transition: all 0.3s ease;
@@ -1382,16 +1382,17 @@ body {
 }
 
 .footer-social-links a:hover {
-  background: #0a0a0a;
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 
 .footer-social-links a:hover svg {
-  fill: #ffffff;
+  fill: #0a0a0a;
 }
 
 .footer-social-links svg {
-  width: 20px;
-  height: 20px;
+  width: 28px;
+  height: 28px;
   fill: #0a0a0a;
   transition: fill 0.3s ease;
 }
