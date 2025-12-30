@@ -511,38 +511,4 @@ window.addEventListener('DOMContentLoaded', () => {
       });
     });
   });
-
-  const spotifyToggle = document.getElementById('spotify-toggle');
-  const spotifyContainer = document.getElementById('spotify-player-container');
-  const spotifyClose = document.getElementById('spotify-close');
-  const spotifyIframe = document.getElementById('spotify-iframe');
-
-  if (spotifyToggle && spotifyContainer && spotifyClose && spotifyIframe) {
-    let iframeLoaded = false;
-
-    spotifyToggle.addEventListener('click', () => {
-      const wasActive = spotifyContainer.classList.contains('active');
-      spotifyContainer.classList.toggle('active');
-
-      if (!wasActive && !iframeLoaded) {
-        const currentSrc = spotifyIframe.src;
-        spotifyIframe.src = '';
-        setTimeout(() => {
-          spotifyIframe.src = currentSrc;
-          iframeLoaded = true;
-        }, 50);
-      }
-    });
-
-    spotifyClose.addEventListener('click', (e) => {
-      e.stopPropagation();
-      spotifyContainer.classList.remove('active');
-    });
-
-    document.addEventListener('click', (e) => {
-      if (!document.getElementById('spotify-player').contains(e.target)) {
-        spotifyContainer.classList.remove('active');
-      }
-    });
-  }
 });
