@@ -773,7 +773,10 @@ body {
 }
 
 .project-year {
-  display: none;
+  font-size: 0.9rem;
+  color: #999;
+  margin: 4px 0 0 0;
+  font-weight: 300;
 }
 
 .hero-section {
@@ -1193,6 +1196,13 @@ body {
   font-size: 1rem;
   color: #666;
   margin: 0;
+}
+
+.featured-project-info .project-year {
+  font-size: 0.9rem;
+  color: #999;
+  margin: 4px 0 0 0;
+  font-weight: 300;
 }
 
 .stats-section {
