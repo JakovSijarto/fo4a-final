@@ -2042,9 +2042,9 @@ body {
 }
 
 .about-spotify-container {
-  max-width: 600px;
-  margin: 60px auto;
-  padding: 0 40px 50px 40px;
+  width: 100%;
+  margin: 60px 0;
+  padding: 0 0 50px 0;
 }
 
 .awards-page-section {
@@ -2145,8 +2145,8 @@ body {
   }
 
   .about-spotify-container {
-    padding: 0 20px 40px 20px;
-    margin: 40px auto;
+    padding: 0 0 40px 0;
+    margin: 40px 0;
   }
 
   .awards-page-title {
