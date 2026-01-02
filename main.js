@@ -5,21 +5,21 @@ window.addEventListener('DOMContentLoaded', () => {
   const splashScreen = document.getElementById('splash-screen');
 
   const imagesToPreload = [
-    '/public/carousel-image1.webp',
-    '/public/carousel-image2.webp',
-    '/public/carousel-image3.webp',
-    '/public/carousel-image4.webp',
-    '/public/carousel-image5.webp',
-    '/public/award-img1.webp',
-    '/public/award-img2.webp',
-    '/public/award-img3.webp',
-    '/public/award-img4.webp',
-    '/public/award-image5.webp',
-    '/public/award-image6.webp',
-    '/public/award-image7.webp',
-    '/public/award-image8.webp',
-    '/public/award-image9.webp',
-    '/public/awards-image.webp'
+    '/carousel-image1.webp',
+    '/carousel-image2.webp',
+    '/carousel-image3.webp',
+    '/carousel-image4.webp',
+    '/carousel-image5.webp',
+    '/award-img1.webp',
+    '/award-img2.webp',
+    '/award-img3.webp',
+    '/award-img4.webp',
+    '/award-image5.webp',
+    '/award-image6.webp',
+    '/award-image7.webp',
+    '/award-image8.webp',
+    '/award-image9.webp',
+    '/awards-image.webp'
   ];
 
   let assetsLoaded = false;
